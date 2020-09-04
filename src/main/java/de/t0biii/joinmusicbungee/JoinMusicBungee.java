@@ -36,13 +36,9 @@ public final class JoinMusicBungee extends Plugin implements Listener {
             return;
         }
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
-        out.writeUTF( channel ); // the channel could be whatever you want
-        out.writeUTF( data1 ); // this data could be whatever you want
-        out.writeInt( data2 ); // this data could be whatever you want
-
-        // we send the data to the server
-        // using ServerInfo the packet is being queued if there are no players in the server
-        // using only the server to send data the packet will be lost if no players are in it
+        out.writeUTF( channel );
+        out.writeUTF( data1 );
+        out.writeInt( data2 );
         player.getServer().getInfo().sendData( "t0biii:joinmusic", out.toByteArray() );
     }
 
