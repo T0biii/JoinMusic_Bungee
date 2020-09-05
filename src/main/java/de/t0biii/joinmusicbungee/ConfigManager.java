@@ -13,6 +13,7 @@ public class ConfigManager {
     private JoinMusicBungee plugin;
     public ConfigManager(JoinMusicBungee plugin){
         this.plugin = plugin;
+        load();
     }
 
     public void load(){
