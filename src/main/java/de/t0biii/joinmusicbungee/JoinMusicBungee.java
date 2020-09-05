@@ -17,7 +17,7 @@ public final class JoinMusicBungee extends Plugin  {
         getProxy().getPluginManager().registerListener(this, new PlayerJoin(this));
 
         if(cm.getConfig().getBoolean("metrics")){
-            int pluginId = 8760; // <-- Replace with the id of your plugin!
+            int pluginId = 8760;
             Metrics metrics = new Metrics(this, pluginId);
         }
 
